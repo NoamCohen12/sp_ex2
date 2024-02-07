@@ -119,5 +119,4 @@ void printPath(int matrixDist[SIZE][SIZE], int x, int y){
 
    // printf("Shortest path from %d to %d: %d\n", x, y, dist[x][y]);
 }
-/////////////////////////////////////////////////////////////////////
 
