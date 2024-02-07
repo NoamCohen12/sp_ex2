@@ -11,14 +11,14 @@ int main()
     printf("please put a letter A/B/C or D to Exit: \n");
     scanf("%c", &letter);
 
-    while (letter != 'D'||letter == EOF){
+    while (letter != 'D'&&letter != EOF){
     
         if (letter == 'A'){
             matrixVaribale(matrix, SIZE, SIZE);
         }
 
          if (letter == 'B'){
-            printf("please input 2 vertax: ");
+            
             scanf("%d %d", &x, &y);
             int visited[10]= {0};
             int result = isThereRoute(matrix,x,y,visited);
