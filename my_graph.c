@@ -8,7 +8,7 @@ int main()
     char letter;
     int x,y;
 
-    printf("please put a letter A/B/C or D to Exit: \n");
+   // printf("please put a letter A/B/C or D to Exit: \n");
     scanf("%c", &letter);
 
     while (letter != 'D'&&letter != EOF){
@@ -20,8 +20,8 @@ int main()
          if (letter == 'B'){
             
             scanf("%d %d", &x, &y);
-            int visited[10]= {0};
-            int result = isThereRoute(matrix,x,y,visited);
+          //  int visited[10]= {0};
+            int result = isThereRoute(matrix,x,y);
             if (result == 0)
             {
                 printf("False\n");
