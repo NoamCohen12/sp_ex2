@@ -67,7 +67,7 @@ int isThereRoute(int matrixDist[SIZE][SIZE], int x, int y){
 
 
 
-void printPath(int matrixDist[SIZE][SIZE], int x, int y){
+int printPath(int matrixDist[SIZE][SIZE], int x, int y){
     int dist[SIZE][SIZE];
     int i, j, k;
 
@@ -110,12 +110,11 @@ void printPath(int matrixDist[SIZE][SIZE], int x, int y){
     // Check if there is a route from x to y
     if (dist[x][y] == INF||dist[x][y] == 0)
     {
-        printf("-1\n");
-        return;
+        return -1;
     }
 
     // Print the shortest path from x to y
-     printf( "%d\n", dist[x][y]);
+     return dist[x][y];
 
    // printf("Shortest path from %d to %d: %d\n", x, y, dist[x][y]);
 }

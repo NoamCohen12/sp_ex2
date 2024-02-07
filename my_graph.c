@@ -20,7 +20,6 @@ int main()
          if (letter == 'B'){
             
             scanf("%d %d", &x, &y);
-          //  int visited[10]= {0};
             int result = isThereRoute(matrix,x,y);
             if (result == 0)
             {
@@ -34,7 +33,8 @@ int main()
 
         if (letter == 'C') {
           scanf("%d %d", &x, &y);
-         printPath(matrix,x,y);
+        int res = printPath(matrix,x,y);
+        printf("%d\n" , res);
            
 
     }
