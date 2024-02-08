@@ -1,5 +1,5 @@
 
-all: my_graph
+all: my_graph my_Knapsack
 
 .PHONY: all clean
 	
@@ -19,9 +19,12 @@ libmymath.a: my_mat.o
 my_mat.o: my_mat.c my_mat.h
 	gcc -Wall -g -fPIC -c my_mat.c -o my_mat.o
 
+my_Knapsack: my_Knapsack.c  
+	gcc -Wall -g my_Knapsack.c -o my_Knapsack	
+
 
 clean:
-	rm -f *.o *.a my_graph
+	rm -f *.o *.a my_graph my_Knapsack
 
 
 
