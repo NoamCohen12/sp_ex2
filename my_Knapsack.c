@@ -62,7 +62,7 @@ int knapSack(int weights[SIZE], int values[SIZE], int selected_bool[SIZE])
             }
         }
     }
-//    // Print the matrix
+// /   // Print the matrix
 //     printf("Matrix:\n");
 //     for (int i = 0; i < SIZE + 1; i++)
 //     {
