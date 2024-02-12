@@ -1,4 +1,3 @@
-#include <stdio.h>
 #define SIZE 5
 #define CAPACITY 20
 #define MAX_LEN 21
@@ -31,6 +30,7 @@ int main()
             printf(" %s", product[i]);
         }
     }
+    printf("\n");
 
     return 0;
 }
