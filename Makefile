@@ -1,18 +1,18 @@
 
-all: my_graph my_Knapsack
+all: my_graph my_Knapsack libmymath.a
 
 .PHONY: all clean
 	
-my_graph: libmymath.a my_graph.o
-	gcc -Wall -g my_graph.o ./libmymath.a -o my_graph
+my_graph: my_mat.a my_graph.o
+	gcc -Wall -g my_graph.o ./my_mat.a -o my_graph
 
 my_graph.o: my_graph.c my_mat.h
 	gcc -Wall -g -c  my_graph.c -o my_graph.o
 
 
-libmymath.a: my_mat.o 
-	ar rcs libmymath.a my_mat.o
-	ranlib libmymath.a
+my_mat.a: my_mat.o 
+	ar rcs my_mat.a my_mat.o
+	ranlib my_mat.a
 
 
 my_mat.o: my_mat.c my_mat.h
