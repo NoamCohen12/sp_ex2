@@ -1,3 +1,4 @@
+#include <stdio.h>
 #define SIZE 5
 #define CAPACITY 20
 #define MAX_LEN 21
