@@ -1,5 +1,5 @@
 
-all: my_graph my_Knapsack libmymath.a
+all: my_graph my_Knapsack my_mat.a
 
 .PHONY: all clean
 	
