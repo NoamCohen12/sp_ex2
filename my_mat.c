@@ -3,6 +3,7 @@
 #include "my_mat.h"
 #define INF INT_MAX
 
+//if the letter is 'A' run "matrixVaribale" function to absorb the values of the matrix
 void matrixVaribale(int matrix[][SIZE], int rows, int cols){ // A
     for (int i = 0; i < rows; i++)
     {
@@ -13,6 +14,7 @@ void matrixVaribale(int matrix[][SIZE], int rows, int cols){ // A
     }
 }
 
+//if the letter is 'B' get two positions from the user and run "isThereRoute" function to check if there is a route between them
 int isThereRoute(int matrixDist[SIZE][SIZE], int x, int y){
     int dist[SIZE][SIZE];
     int i, j, k;
@@ -36,7 +38,6 @@ int isThereRoute(int matrixDist[SIZE][SIZE], int x, int y){
             }
         }
     }
-
     // Floyd-Warshall algorithm
     for (k = 0; k < SIZE; k++)
     {
@@ -52,7 +53,6 @@ int isThereRoute(int matrixDist[SIZE][SIZE], int x, int y){
             }
         }
     }
-
     // Check if there is a route from x to y
     if (dist[x][y] == INF||dist[x][y] == 0)
     {
@@ -61,12 +61,11 @@ int isThereRoute(int matrixDist[SIZE][SIZE], int x, int y){
     else{
         return 1;
     }
-
 }
 
-
-
-
+/*if the letter is 'C' get two positions from the user and run "printPath" 
+function that calculate a "shortest path" matrix by Floyd-Warshall algorithm and return the weight of the path
+**/
 int printPath(int matrixDist[SIZE][SIZE], int x, int y){
     int dist[SIZE][SIZE];
     int i, j, k;
@@ -90,7 +89,6 @@ int printPath(int matrixDist[SIZE][SIZE], int x, int y){
             }
         }
     }
-
     // Floyd-Warshall algorithm
     for (k = 0; k < SIZE; k++)
     {
@@ -106,16 +104,13 @@ int printPath(int matrixDist[SIZE][SIZE], int x, int y){
             }
         }
     }
-
     // Check if there is a route from x to y
     if (dist[x][y] == INF||dist[x][y] == 0)
     {
         return -1;
     }
-
     // Print the shortest path from x to y
      return dist[x][y];
-
    // printf("Shortest path from %d to %d: %d\n", x, y, dist[x][y]);
 }
 

@@ -10,7 +10,6 @@ my_graph.o: my_graph.c my_mat.h
 	gcc -Wall -g -c  my_graph.c -o my_graph.o
 
 
-
 libmymath.a: my_mat.o 
 	ar rcs libmymath.a my_mat.o
 	ranlib libmymath.a

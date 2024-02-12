@@ -31,6 +31,7 @@ int main()
             printf(" %s", product[i]);
         }
     }
+    printf("\n");
 
     return 0;
 }

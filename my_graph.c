@@ -9,15 +9,14 @@ int main()
     int x,y;
 
    // printf("please put a letter A/B/C or D to Exit: \n");
+   //get the letter from the user in infinity loop
     scanf("%c", &letter);
 
     while (letter != 'D'&&letter != EOF){
-    
         if (letter == 'A'){
             matrixVaribale(matrix, SIZE, SIZE);
         }
-
-         if (letter == 'B'){
+        if (letter == 'B'){
             
             scanf("%d %d", &x, &y);
             int result = isThereRoute(matrix,x,y);
@@ -30,13 +29,10 @@ int main()
             }
             
         }
-
         if (letter == 'C') {
           scanf("%d %d", &x, &y);
         int res = printPath(matrix,x,y);
         printf("%d\n" , res);
-           
-
     }
     scanf("%c", &letter);//for avoid to infinty loop
 
